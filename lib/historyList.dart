@@ -32,7 +32,7 @@ class HistoryState extends State<HistoryWidget>{
           widget.clickToCalc(index);
           _scrollController.animateTo(_scrollController.position.minScrollExtent,
               duration: Duration(milliseconds: 200),curve: Curves.ease);
-          if(widget.customFunc!=null) widget.customFunc();//执行专门的函数，如历史页的返回
+          if(widget.customFunc!=null) widget.customFunc();//执行专门的函数，如历史页面的返回
         },//回调
       ),
       onDismissed: (direction) {
