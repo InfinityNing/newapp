@@ -64,7 +64,7 @@ class HistoryState extends State<HistoryWidget>{
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text('删除',style: TextStyle(fontSize: 18,color: Colors.white),),
-            Icon(Icons.delete_forever,color: Colors.white,),
+            Icon(Icons.delete_forever,color: Colors.white,size: 18,),
           ],
         ),
       ),
