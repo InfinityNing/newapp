@@ -21,12 +21,15 @@ class CalcState extends State<Calc>{
       buttonColor=Color(0xFFF5F5F5), clearButtonColor=Color(0xFFFF6347),
       resultButtonColor=Colors.blue;
   List calcHistory =new List();
-//  List calcHistory =[
-//    '1231321311321321','165231650312','1231','74365966','00002','102320','7413566',
-//    '15612312','23','256262362','1415','95592306362','75126512651213','1651656','46511231313','51365465',
-//    '56515156','2131','2020233333333333333','000001=2222','1651','65165=1161651','55555',
-//    '15616','32135466464','321321','3213','32131','1231','1231','12312'
-//  ];
+
+  void updateList(){
+    calcHistory =[
+      '1231321311321321','165231650312','1231','74365966','00002','102320','7413566',
+      '15612312','23','256262362','1415','95592306362','75126512651213','1651656','46511231313','51365465',
+      '56515156','2131','2020233333333333333','000001=2222','1651','65165=1161651','55555',
+      '15616','32135466464','321321','3213','32131','1231','1231','12312'
+    ];
+  }
   void change(String cc){
     setState(() {
       if(calcBuffer.toString()=='ERROR'){
@@ -121,6 +124,12 @@ class CalcState extends State<Calc>{
   bool easterEgg(String input){
     if(input=='333') {
       openNewPage(HistoryPage(calcHistory,clickToCalc,slideToDel));
+      return true;
+    }
+    if(input=='222'){
+      setState(() {
+        updateList();
+      });
       return true;
     }
     if(codeLib.contains(input)) {

@@ -8,7 +8,7 @@ class HistoryWidget extends StatefulWidget{
       this.clickToCalc,this.slideToDel,[this.customFunc]);
   @override
   State<StatefulWidget> createState() {
-    return new HistoryState();
+    return HistoryState();
   }
 }
 class HistoryState extends State<HistoryWidget>{
